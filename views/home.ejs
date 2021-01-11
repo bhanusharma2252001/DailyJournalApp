@@ -1,0 +1,14 @@
+<%-include("partials/header")-%>
+<h1>Home</h1>
+<p><%=content%></p>
+<%PostsArray.forEach((element)=>{%>
+     
+    <h3><%=element.Title %></h3> 
+    <br> 
+    <p><%=element.Content.slice(0,100)+"... "%><a href="/posts/<%=element.Title%>">Read More</a></p> 
+    
+<%});%> 
+
+
+
+<%- include("partials/footer") -%>
